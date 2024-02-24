@@ -43,9 +43,9 @@ export class MimicLogs {
    *
    * @param {number} startTs
    * @param {number} endTs
-   * @param {number} limit
+   * @param {number} limit 
    * @returns {Promise<{timestamp: number; message: string}[]>}
-   */
+   */ 
   static fetchPreviousLogs({ startTs, endTs, limit }) {
     return new Promise((resolve) => {
       const delay = 250 + Math.random() * 2750;
@@ -63,16 +63,16 @@ export class MimicLogs {
     });
   }
 
-  static subscribeToLiveLogs(callback) {
+  static subscribeToLiveLogs(callback) { 
     let timeout;
     const generateNextLog = () => {
       const nextLog = { timestamp: Date.now(), message: getRandomLog() };
-      callback(nextLog);
+      callback(nextLog);  
       timeout = setTimeout(generateNextLog, 10 + Math.random() * 1990);
     };
     timeout = setTimeout(generateNextLog, 10 + Math.random() * 1990);
 
-    return () => clearInterval(timeout);
+    return () => clearInterval(timeout);      
   }
 }
 
