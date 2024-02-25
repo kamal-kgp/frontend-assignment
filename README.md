@@ -8,11 +8,14 @@ Frontend Assignment: Fetching and Viewing Live Log and Metrics Data
    cd your-repo
 
 2. **Install dependencies**
+   ```bash
     npm install
 
 # Usage 
 1. **start development server**
-  npm run start
+   ```bash
+   npm run start
 
-2. **build the project for production**
-  npm run build 
+3. **build the project for production**
+   ```bash
+   npm run build 
