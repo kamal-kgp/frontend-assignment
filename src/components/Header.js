@@ -25,9 +25,9 @@ export default function Header() {
         const LogActive = (searchParams.get('LogActive') === 'true' ? true : false) || false;
         let show = false
         if(!LogActive) show = searchParams.get('show') === 'true' ? true : false
-        console.log(Time, Unit, LogActive, show) 
+        // console.log(Time, Unit, LogActive, show) 
 
-        if (Time != time || Unit != unit) {
+        if (Time !== time || Unit !== unit) {
             setTime(Time) 
             setUnit(Unit)
             setLogActive(LogActive);

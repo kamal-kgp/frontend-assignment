@@ -17,7 +17,7 @@ export default function Log(props) {
 
   const time = parseInt(props.time) || 0 ;
   const unit = props.unit || 'minutes';
-  const timems = time*(unit == 'minutes' ? 60000 : 3600000); 
+  const timems = time*(unit === 'minutes' ? 60000 : 3600000); 
   const logActive = props.logOpen || false;
   
   const currentDate = new Date();

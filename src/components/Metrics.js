@@ -15,7 +15,7 @@ export default function Home(props) {
   
   const time = parseInt(props.time) || 0 ;
   const unit = props.unit || 'minutes';
-  const timems = time*(unit == 'minutes' ? 60000 : 3600000); 
+  const timems = time*(unit === 'minutes' ? 60000 : 3600000); 
   const logOpen = props.logOpen || false;
   const metricOpen = props.metricOpen || false; 
   const show = props.show || false;
